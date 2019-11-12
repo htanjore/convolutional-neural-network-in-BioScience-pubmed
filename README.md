@@ -3,4 +3,4 @@
 ### Data is acquired with Pubmed API
 
 
-![html](notebooks/lda.html')
+![html](data/lda.html')
