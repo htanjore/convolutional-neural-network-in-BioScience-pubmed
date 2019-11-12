@@ -3,4 +3,4 @@
 
 
 
-![ScreenShot](notebooks/lda.html)
+notebooks/lda.html
