@@ -1,5 +1,5 @@
-### This Project is currently under progress. 
-### How convolutional neural network is used in Research or Biological sciences based on pubmed data?
+
+### How convolutional neural network is used in Research or in Biological sciences based on pubmed data?
+### Data is acquired with Pubmed API
 
 
-file://github/convolutional-neural-network-in-BioScience-pubmed/notebooks/lda.html
