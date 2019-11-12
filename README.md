@@ -2,5 +2,4 @@
 ### How convolutional neural network is used in Research or Biological sciences based on pubmed data?
 
 
-
-notebooks/lda.html
+file://github/convolutional-neural-network-in-BioScience-pubmed/notebooks/lda.html
