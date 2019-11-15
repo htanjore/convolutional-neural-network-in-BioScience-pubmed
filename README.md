@@ -3,7 +3,7 @@
 
 ### Data: Data was acquired using Pubmed API and Eutilities with BeautifulSoup.
 
-#### The code can be used to search for specific key words using pubmed https://www.ncbi.nlm.nih.gov/pubmed/ and to get relevant fields such as to retrieve Abstract, Article Title, Years Published, Country of Journal, Journal Title, Affiliation etc. 
+#### The code can be used to search for specific key words. The source for the articles is from Pubmed https://www.ncbi.nlm.nih.gov/pubmed/ . The code can be used to retrieve Abstract, Article Title, Years Published, Country of Journal, Journal Title, Affiliation etc. 
 
  
 ### Topic model(LDA):
