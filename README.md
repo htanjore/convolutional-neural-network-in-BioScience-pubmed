@@ -5,14 +5,20 @@
 
 
 
-#### Topic model(LDA):
+## Topic model(LDA):
+
+
 ### click [CNN TOPIC Model](http://htmlpreview.github.com/?https://github.com/htanjore/convolutional-neural-network-in-BioScience-pubmed/blob/master/data/lda.html)
+
+
 
 Word Cloud of Bigrams Where CNN is used in Biosciences:
 ![ScreenShot](data/word_cloud_cnn.png 'CNN')
 
 
-### Topic model(LDA) with subset of data where CNN is used as a tool to analyze text in pubmed:
+## Topic model(LDA) with text:
+
+
 
 ### click [CNN TOPIC Model TEXT](http://htmlpreview.github.com/?https://github.com/htanjore/convolutional-neural-network-in-BioScience-pubmed/blob/master/data/lda_text.html)
 
