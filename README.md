@@ -13,7 +13,7 @@ Following this project, I was curious to understand how the CNN is used in Bio
 ### Topic model(LDA):
 
 
-### click here [CNN TOPIC Model](http://htmlpreview.github.com/?https://github.com/htanjore/convolutional-neural-network-in-BioScience-pubmed/blob/master/data/lda.html)
+### click here [CNN TOPIC Model](https://htmlpreview.github.io/?https://github.com/htanjore/convolutional-neural-network-in-BioScience-pubmed/blob/master/data/lda.html)
 
 
 
