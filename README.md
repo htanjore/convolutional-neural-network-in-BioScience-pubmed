@@ -1,32 +1,70 @@
-## Convolutional Neural Network(CNN) in BioSciences from Pubmed and Topic Model
-Convolutional Neural Network (CNN) is a deep learning algorithm used in image analysis and text classification. For my capstone project at Nashville Software School, I used text analysis on customer reviews using Natural Language Processing (NLP) and Machine learning algorithm to predict ratings from Drugs.com. I tested Logistic Regression, Support Vector Machines (SVM) and Keras/CNN machine learning algorithms to predict ratings. Of the three models tested, CNN model performed better compared to Logistic regression and SVM based on AOC and accuracy scores. 
+## Convolutional Neural Network (CNN) in BioSciences: PubMed Analysis & Topic Modeling
 
-Following this project, I was curious to understand how the CNN is used in Biomedical Research. Pubmed, is a freely available search engine for Biomedical Literature from National Library of Medicine (NLM). In this project, I took advantage of Pubmed API/Eutilities and Pandas/BeautifulSoup libraries to get the data from XML output. Text from the Abstracts were analyzed using NLP and LDA Topic Model to determine How researchers are using CNN in Biomedical Research?. Majority of studies used CNN for Image analysis and fewer studies used the algorithm for Text analysis. Overall, the code has general applicability to search for any topic or author in Biomedical Literature from Pubmed to visualize the publication per year, Impact factor of journals and topic model. 
+This project analyzes the application and trends of Convolutional Neural Networks (CNNs) in biomedical research using PubMed publications. We retrieve, analyze, and model research abstracts to understand how CNNs are being applied across different biomedical domains.
 
-
-
-### Data: Data was acquired using Pubmed API and Eutilities with BeautifulSoup.
-
-#### The code can be used to search for specific key words. The source for the articles is from Pubmed https://www.ncbi.nlm.nih.gov/pubmed/ . The code can be used to retrieve Abstract, Article Title, Years Published, Country of Journal, Journal Title, Affiliation etc. 
-
- 
-### Topic model(LDA):
-
-
-### click here [CNN TOPIC Model](https://htmlpreview.github.io/?https://github.com/htanjore/convolutional-neural-network-in-BioScience-pubmed/blob/master/data/lda.html)
+Convolutional Neural Networks (CNNs) are deep learning architectures primarily known for image analysis but increasingly used in biomedical text classification, medical image analysis, and computational biology applications.
 
 
 
-Word Cloud of Bigrams Where CNN is used in Biosciences:
-![ScreenShot](data/word_cloud_cnn.png 'CNN')
 
+## Data Collection
 
-### Topic model(LDA) with text:
+Data is acquired from [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/) using the NCBI E-utilities API. The `fetch_pubmed.py` script retrieves comprehensive publication metadata including:
+- Article abstracts and titles
+- Publication year and date
+- Journal information (title, country, impact factor)
+- Author affiliations
+- Publication types and keywords
 
+### Usage
 
+The PubMed fetcher supports flexible date ranges and batch processing:
+```bash
+source .env && python3 notebooks/fetch_pubmed.py "search query" \
+  --email your.email@example.com \
+  --start-year 1990 --end-year 2026 \
+  --api-key YOUR_NCBI_KEY
+``` 
 
-### click here [CNN TOPIC Model TEXT](http://htmlpreview.github.com/?https://github.com/htanjore/convolutional-neural-network-in-BioScience-pubmed/blob/master/data/lda_text.html)
+## Exploratory Data Analysis (EDA)
 
-Word Cloud of Bigrams Where CNN is used for Text Analysis in BioSciences:
-![ScreenShot](data/word_cloud_cnn_text.png 'CNN Text')
+The EDA notebooks provide comprehensive statistical analysis of CNN publications:
+- Publication trends over time
+- Leading countries and journals
+- Publication type distribution
+- Impact factor analysis
+
+![Publication Trends](data/cnn_publications_per_year.png 'CNN Publications Per Year')
+![Journal Distribution](data/cnn_journals.png 'Top Journals')
+![Country Analysis](data/cnn_top_countries.png 'Top Countries')
+
+## Topic Modeling (Latent Dirichlet Allocation)
+
+Latent Dirichlet Allocation (LDA) is used to discover hidden semantic topics within CNN-related biomedical research abstracts. This unsupervised learning approach automatically identifies key research themes and their relationships.
+
+### Interactive LDA Visualization
+
+**[View the CNN Topic Model Visualization](https://htmlpreview.github.io/?https://github.com/htanjore/convolutional-neural-network-in-BioScience-pubmed/blob/master/data/ldacnn.html)**
+
+The interactive visualization shows topic distributions, key terms per topic, and term relevance metrics.
+
+### Topic Word Clouds
+
+Word clouds derived from LDA topics highlight the most relevant terms in each topic:
+
+![CNN Topic Word Clouds](data/topic_words_cnn.png 'Topic Word Clouds')
+![CNN Bigrams](data/wordcloud_cnn.png 'CNN Research Bigrams')
+
+## Project Structure
+
+- `notebooks/` — Jupyter notebooks for data fetching, EDA, and LDA analysis
+  - `fetch_pubmed.py` — PubMed API data retrieval script
+  - `cnn_version_EDA.ipynb` — Exploratory data analysis
+  - `LDA_Topic_model.ipynb` — Topic modeling with LDA
+- `data/` — Processed outputs and visualizations
+- `requirements.txt` — Python dependencies
+
+## Results
+
+Analysis reveals that CNNs have diverse applications in biomedical research, including medical image analysis, genomics, drug discovery, and text mining. The topic model identifies key research clusters and emerging trends in CNN applications.
 
