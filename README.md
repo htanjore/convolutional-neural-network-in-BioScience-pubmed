@@ -22,28 +22,12 @@ The PubMed fetcher supports flexible date ranges and batch processing. Run these
 
 CNN search example:
 ```bash
-source .env && python3 notebooks/fetch_pubmed.py "Convolutional Neural Network (CNN or ConvNet)" \
-  --email your.email@example.com \
-  --start-year 1990 --end-year 2026 \
-  --batch-size 10000 \
-  --api-key "$NCBI_API_KEY" \
-  --csv-name cnn_abstract.csv
-```
-
-COVID-19 search example:
-```bash
-source .env && python3 notebooks/fetch_pubmed.py "novel coronavirus or covid-19 or coronavirus disease-2019" \
-  --email your.email@example.com \
-  --start-year 2019 --end-year 2026 \
-  --batch-size 10000 \
-  --api-key "$NCBI_API_KEY" \
-  --csv-name covid19_results.csv
-```
-
-## Exploratory Data Analysis (EDA)
-
-The EDA notebooks provide comprehensive statistical analysis of CNN publications:
-- Publication trends over time
+source notebooks/.env && python3 notebooks/fetch_pubmed.py "Convolutional Neural Network (CNN or ConvNet)" \
+   --email your.email@example.com \
+   --start-year 1990 --end-year 2026 \
+   --batch-size 10000 \
+     --api-key $NCBI_API_KEY \
+     --csv-name cnn_abstract.csv
 - Leading countries and journals
 - Publication type distribution
 - Impact factor analysis
