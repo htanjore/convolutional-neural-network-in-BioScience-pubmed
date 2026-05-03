@@ -102,3 +102,15 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# macOS metadata
+.DS_Store
+
+# User-requested files to keep local only
+notebooks/LDA_Topic_model_text.ipynb
+notebooks/cnn_version_get_data_version3.ipynb
+notebooks/get_data.py
+data/JournalHomeGrid.csv
+
+# Do not track CSV data artifacts
+*.csv
