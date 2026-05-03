@@ -18,16 +18,18 @@ Data is acquired from [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/) using the N
 
 ### Usage
 
-The PubMed fetcher supports flexible date ranges and batch processing. Run these commands from the project root after setting your API key in `.env`.
-
-CNN search example:
+The PubMed fetcher supports flexible date ranges and batch processing:
 ```bash
-source notebooks/.env && python3 notebooks/fetch_pubmed.py "Convolutional Neural Network (CNN or ConvNet)" \
-   --email your.email@example.com \
-   --start-year 1990 --end-year 2026 \
-   --batch-size 10000 \
-     --api-key $NCBI_API_KEY \
-     --csv-name cnn_abstract.csv
+source .env && python3 notebooks/fetch_pubmed.py "search query" \
+  --email your.email@example.com \
+  --start-year 1990 --end-year 2026 \
+  --api-key YOUR_NCBI_KEY
+``` 
+
+## Exploratory Data Analysis (EDA)
+
+The EDA notebooks provide comprehensive statistical analysis of CNN publications:
+- Publication trends over time
 - Leading countries and journals
 - Publication type distribution
 - Impact factor analysis
